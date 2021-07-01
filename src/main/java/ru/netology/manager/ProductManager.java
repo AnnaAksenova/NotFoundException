@@ -5,6 +5,7 @@ import ru.netology.domain.Smartphone;
 import ru.netology.domain.Product;
 import ru.netology.repository.ProductRepository;
 
+
 public class ProductManager {
     ProductRepository productRepository;
 
