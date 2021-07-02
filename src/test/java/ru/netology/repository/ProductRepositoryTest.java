@@ -24,7 +24,7 @@ class ProductRepositoryTest {
   }
 
   @Test
-  public void successfullyDeletingAnExistingElement(){
+  public void successfullyDeletingAnExistingElementTest(){
     repository.save(coreJava);
 
     Product[] expected = new Product[]{coreJava};
@@ -35,9 +35,10 @@ class ProductRepositoryTest {
   @Test
   public void testNotFound(){
     repository.save(coreJava);
+    repository.save(book1);
 
     assertThrows(NotFoundException.class, () -> {
-      repository.removeById(-2);
+      repository.removeById(14);
     });
   }
 }

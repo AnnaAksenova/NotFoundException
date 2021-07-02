@@ -34,10 +34,10 @@ public class ProductManager {
     private boolean matches(Product product, String search) {
         if (product instanceof Book) {
             Book book = (Book) product;
-            if (((Book) product).getAuthor().contains(search)) {
+            if (book.getAuthor().contains(search)) {
                 return true;
             }
-            if (((Book) product).getName().contains(search)) {
+            if (book.getName().contains(search)) {
                 return true;
             }
             return false;
@@ -45,10 +45,10 @@ public class ProductManager {
 
         if (product instanceof Smartphone) {
             Smartphone smartphone = (Smartphone) product;
-            if (((Smartphone) product).getFabricator().contains(search)) {
+            if (smartphone.getFabricator().contains(search)) {
                 return true;
             }
-            if (((Smartphone) product).getName().contains(search)) {
+            if (smartphone.getName().contains(search)) {
                 return true;
             }
             return false;
