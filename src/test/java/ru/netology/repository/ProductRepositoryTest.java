@@ -34,9 +34,7 @@ class ProductRepositoryTest {
 
   @Test
   public void testNotFound(){
-    repository.save(book1);
-    repository.save(book2);
-    repository.save(book3);
+    repository.save(coreJava);
 
     assertThrows(NotFoundException.class, () -> {
       repository.removeById(-2);
